@@ -60,7 +60,7 @@
 - **Solución:** Incorpora suscripción digital de documentos mediante **firma electrónica con plena validez jurídica bajo la Ley 527 de 1999** en Colombia, suprimiendo trámites manuales y costes notariales.
 - **Rol:** Product Owner & Scrum Master / Arquitectura Técnica.
 - **Stack:** Web App SPA, Backend APIs, Firma Electrónica Ley 527, Automatización Documental, Git / CI-CD.
-- 🔗 **Acceso en vivo:** [app.yolitigo.com](https://app.yolitigo.com/)
+- 🔗 **Acceso en vivo:** [yolitigo.com](https://yolitigo.com/)
 
 ---
 
