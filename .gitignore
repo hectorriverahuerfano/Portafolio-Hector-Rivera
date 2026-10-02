@@ -1,0 +1,13 @@
+# Archivos de entorno y tokens
+token*
+.env
+.env.*
+*.local
+
+# Dependencias y logs
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
