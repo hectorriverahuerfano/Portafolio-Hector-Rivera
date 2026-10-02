@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héctor Fabio Rivera - AI Developer | AI Product Owner | AI Project Manager</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            /* Azul Oscuro Premium */
+            --secondary-color: #0284c7;
+            /* Azul IA / Tecnológico */
+            --accent-color: #38bdf8;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+
+        .resume-container {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .sidebar {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 40px 30px;
+        }
+
+        .main-content {
+            padding: 40px 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .section-title {
+            color: #ffffff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .company-date {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .badge-skill {
+            background-color: rgba(2, 132, 199, 0.1);
+            color: var(--secondary-color);
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 8px;
+            margin-right: 4px;
+        }
+
+        .sidebar .badge-skill {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--accent-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos exclusivos para la acción de Exportar/Imprimir */
+        @media print {
+
+            html,
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                font-size: 10px !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            /* Forzar el uso de todo el ancho de la hoja anulando las restricciones de Bootstrap */
+            .container,
+            .resume-container {
+                min-width: 100% !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                overflow: visible !important;
+            }
+
+            /* Forzar solo el grid PRINCIPAL a mantenerse en 2 columnas */
+            .resume-container>.row {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                margin: 0 !important;
+            }
+
+            .resume-container>.row>.col-md-4 {
+                width: 32% !important;
+                max-width: 32% !important;
+            }
+
+            .resume-container>.row>.col-md-8 {
+                width: 68% !important;
+                max-width: 68% !important;
+            }
+
+            /* Permitir que las filas internas (como las certificaciones) hagan salto de línea */
+            .main-content .row {
+                display: flex !important;
+                flex-wrap: wrap !important;
+            }
+
+            .main-content .col-4 {
+                width: 33.33% !important;
+                max-width: 33.33% !important;
+                flex: 0 0 33.33% !important;
+            }
+
+            /* Espaciados */
+            body {
+                font-size: 11px !important;
+            }
+
+            .mb-5 {
+                margin-bottom: 12px !important;
+            }
+
+            .mb-4 {
+                margin-bottom: 8px !important;
+            }
+
+            .mb-3 {
+                margin-bottom: 6px !important;
+            }
+
+            .mt-4 {
+                margin-top: 0 !important;
+            }
+
+            p,
+            ul,
+            li {
+                margin-bottom: 3px !important;
+                line-height: 1.25 !important;
+            }
+
+            .sidebar {
+                background-color: #1e293b !important;
+                color: #f8fafc !important;
+                padding: 25px 20px !important;
+            }
+
+            .main-content {
+                padding: 25px 25px !important;
+            }
+
+            .profile-img {
+                width: 100px !important;
+                height: 100px !important;
+                margin-bottom: 12px !important;
+                border: 2px solid var(--secondary-color) !important;
+            }
+
+            .section-title {
+                font-size: 13px !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 3px !important;
+            }
+
+            .job-title {
+                font-size: 11.5px !important;
+            }
+
+            .company-date {
+                font-size: 10px !important;
+            }
+
+            /* Skills */
+            .badge-skill {
+                padding: 3px 6px !important;
+                font-size: 9.5px !important;
+                margin-bottom: 4px !important;
+                margin-right: 3px !important;
+            }
+
+            /* Certifications */
+            .row.g-2.text-secondary {
+                font-size: 9px !important;
+                line-height: 1.15 !important;
+            }
+
+            .row.g-2>div {
+                padding-top: 2px !important;
+                padding-bottom: 2px !important;
+            }
+
+            /* Eliminar transparencias y sombras para evitar rasterización (imagen) al guardar como PDF */
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                filter: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .text-white-50 {
+                color: #94a3b8 !important;
+            }
+
+            .text-secondary {
+                color: #6c757d !important;
+            }
+
+            .text-muted {
+                color: #64748b !important;
+            }
+
+            .sidebar .section-title {
+                border-bottom: 2px solid #334155 !important;
+            }
+
+            .badge-skill {
+                background-color: #e6f3fa !important;
+            }
+
+            .sidebar .badge-skill {
+                background-color: #334155 !important;
+            }
+
+            /* Configuración de página PDF */
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Botón de Exportar Flotante (No se imprimirá en el PDF) -->
+    <div class="container text-end mt-4 no-print">
+        <button class="btn btn-primary px-4 py-2 fw-bold" onclick="window.print()"
+            style="background-color: var(--secondary-color); border: none; box-shadow: 0 4px 12px rgba(2,132,199,0.3);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-file-earmark-pdf-fill me-2" viewBox="0 0 16 16">
+                <path
+                    d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.508-.077-.004-.115-.053-.13-.105-.015-.054-.006-.13.065-.213.072-.085.193-.175.39-.258zm-.32-1.95.772-2.435c-.155.425-.302.83-.44 1.21-.139.378-.257.74-.332 1.058zM10 3.5v2a.5.5 0 0 0 .5.5h2v-2H10z" />
+                <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L9.293 0zM10.147 4.646a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.293l2.646-2.647z" />
+            </svg>
+            Exportar Hoja de Vida a PDF
+        </button>
+    </div>
+
+    <!-- Contenedor Principal del CV -->
+    <div class="container resume-container">
+        <div class="row g-0">
+
+            <!-- COLUMNA IZQUIERDA: SIDEBAR -->
+            <div class="col-md-4 sidebar">
+                <div class="text-center mb-4">
+                    <img src="foto_perfil.jpg" alt="Héctor Fabio Rivera" class="profile-img mb-3 shadow">
+                    <h2 class="fw-bold fs-4 tracking-wide m-0">HÉCTOR FABIO RIVERA</h2>
+                    <p class="text-info fw-semibold mt-1 mb-0" style="color: #38bdf8 !important;">
+                        AI Developer | AI Product Owner | AI Project Manager<br>
+                    </p>
+                </div>
+
+                <!-- CONTACTO -->
+                <div class="mb-4">
+                    <h3 class="section-title">Contacto</h3>
+                    <ul class="list-unstyled text-white-50 small lh-lg">
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="me-2 text-white">📱</span> <a href="https://wa.me/573507928813" target="_blank"
+                                class="text-info text-decoration-underline">+57 3507928813</a>
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="me-2 text-white">✉️</span> <a href="mailto:hector58472@gmail.com"
+                                class="text-info text-decoration-underline">hector58472@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PORTAFOLIO & REDES -->
+                <div class="mb-4">
+                    <h3 class="section-title">Portafolio & Redes</h3>
+                    <ul class="list-unstyled text-white-50 small lh-lg">
+                        <li class="mb-2">
+                            <span class="text-white fw-bold">LinkedIn:</span>
+                            <a href="https://www.linkedin.com/in/hector-fabio-r-35614610b/" target="_blank"
+                                class="text-info text-decoration-none">linkedin.com/in/hector-fabio-rivera</a>
+                        </li>
+                        <li class="mb-2">
+                            <span class="text-white fw-bold">Platzi:</span>
+                            <a href="https://platzi.com/p/HRIVERA_58472/" target="_blank"
+                                class="text-info text-decoration-none">platzi.com/p/HRIVERA_58472/</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- HABILIDADES CLAVE -->
+                <div class="mb-4">
+                    <h3 class="section-title">Habilidades Clave</h3>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge-skill">Inteligencia Artificial: Creación de Agentes de IA, MCP (Model Context Protocol), Integración de LLMs (Gemini, Claude, OpenAI), Automatizaciones con IA, Cursor, Copilot</span>
+                        <span class="badge-skill">Product & Project Mgmt: AI Product Ownership, Scrum Framework, Gestión de Backlog & Épicas con IA, Formulación de MVPs, Gestión de Stakeholders y Proveedores</span>
+                        <span class="badge-skill">Tecnologías y Cloud: Python, PHP, JavaScript, Node.js, Java, Microservicios, AWS (Lambda, DynamoDB), Azure, MySQL, SQL Server, Oracle</span>
+                        <span class="badge-skill">Herramientas & Métricas: Azure Boards, Azure DevOps, Jira, Trello, Git/GitHub, CI/CD, BigQuery, OKRs</span>
+                    </div>
+                </div>
+
+                <!-- FORMACIÓN -->
+                <div class="mb-4">
+                    <h3 class="section-title">Formación</h3>
+                    <div class="mb-3">
+                        <h6 class="fw-bold fs-6 m-0 text-white">Ingeniero de Sistemas</h6>
+                        <p class="text-white-50 m-0 small">Uniremington - Bogotá DC <span class="text-info small"
+                                style="color: #38bdf8 !important;">2020</span></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold fs-6 m-0 text-white">Tecnólogo en Sistemas de Información</h6>
+                        <p class="text-white-50 m-0 small">Unigermana - Bogotá DC <span class="text-info small"
+                                style="color: #38bdf8 !important;">2019</span></p>
+                    </div>
+                </div>
+
+                <!-- PROYECTOS DE INNOVACIÓN -->
+                <div>
+                    <h3 class="section-title">Proyectos de Innovación</h3>
+                    <div class="project-card">
+                        <a href="https://lucyapp.com.co/" target="_blank" class="text-info fw-bold text-decoration-none small d-block">Lucyapp.com.co ↗</a>
+                        <span class="text-white-50 small">App móvil comunitaria e inteligente para la localización y reencuentro de mascotas perdidas sin costo.</span>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://allybike.com/" target="_blank" class="text-info fw-bold text-decoration-none small d-block">Allybike.com ↗</a>
+                        <span class="text-white-50 small">Plataforma móvil de micromovilidad para la creación inteligente de rutas en bicicleta y rodadas colaborativas.</span>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://flitsas.com.co/" target="_blank" class="text-info fw-bold text-decoration-none small d-block">Flitsas.com.co ↗</a>
+                        <span class="text-white-50 small">Ecosistema Digital para la automatización y gestión integral de trámites vehiculares y de tránsito sin intermediarios.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: CONTENIDO PRINCIPAL -->
+            <div class="col-md-8 main-content">
+
+                <!-- RESUMEN PROFESIONAL -->
+                <div class="mb-5">
+                    <h3 class="section-title">Resumen Profesional</h3>
+                    <p class="text-secondary lh-base" style="text-align: justify;">
+                        <strong>Ingeniero de Sistemas y Desarrollador de Software especializado en Inteligencia Artificial (IA)</strong>, con amplia experiencia en la arquitectura, codificación y despliegue de soluciones tecnológicas de alto impacto. Especialista en potenciar el ciclo de vida del desarrollo mediante <strong>Inteligencia Artificial aplicada</strong>, construcción de <strong>agentes de IA</strong> e integración avanzada mediante <strong>MCP (Model Context Protocol)</strong>. Cuento con un sólido dominio técnico en <strong>Python</strong>, <strong>PHP</strong>, <strong>JavaScript</strong>, modelado y optimización de bases de datos con <strong>MySQL</strong>, control de versiones con <strong>Git</strong> e infraestructura en la nube con <strong>AWS</strong>. Mi perfil combina ingeniería de software de primer nivel con roles de <strong>AI Product Owner y AI Project Manager</strong>, garantizando una entrega ágil de MVPs, mitigación de riesgos técnicos y alineación estratégica con los objetivos del negocio.
+                    </p>
+                </div>
+
+                <!-- HISTORIAL LABORAL -->
+                <div class="mb-5">
+                    <h3 class="section-title">Historial Laboral</h3>
+
+                    <!-- TRABAJO 1 -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <h4 class="job-title m-0">AI Product Owner & AI Developer</h4>
+                            <span class="company-date">08/2024 - 06/2026</span>
+                        </div>
+                        <p class="text-muted fw-semibold small mb-2">FLitsas — Medellín (Híbrido)</p>
+                        <ul class="text-secondary ps-3 small lh-base">
+                            <li><strong>Liderar la estrategia integral de producto con IA</strong>, co-diseñando el product roadmap técnico y funcional mediante modelos analíticos y agentes autónomos.</li>
+                            <li><strong>Diseñar e implementar agentes de IA personalizados</strong> para la automatización de flujos operativos y analíticos de extremo a extremo en Azure Boards y Azure DevOps.</li>
+                            <li><strong>Formular MVPs y especificaciones funcionales asistidas por IA que redujeron los tiempos de desarrollo en un 50%</strong> simulando escenarios y criterios de aceptación para reducir la incertidumbre del cliente.</li>
+                            <li><strong>Gestionar la relación con stakeholders y proveedores clave</strong>, acelerando la validación técnica de Pruebas de Concepto (PoC) soportadas en IA.</li>
+                            <li><strong>LOGROS:</strong> <strong>Aumento de la capacidad de ejecución en 35%</strong> y reducción en los tiempos de redacción de requerimientos en un 20%, mediante el pre-análisis automático de viabilidad técnica y estructuración con IA, reduciendo bloqueos en sprint y acelerando el time-to-market.</li>
+                        </ul>
+                    </div>
+
+                    <!-- TRABAJO 2 -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <h4 class="job-title m-0">AI Project Manager & Lead Requirements Engineer</h4>
+                            <span class="company-date">08/2023 - 06/2024</span>
+                        </div>
+                        <p class="text-muted fw-semibold small mb-2">Inteia — Medellín</p>
+                        <ul class="text-secondary ps-3 small lh-base">
+                            <li><strong>Estructurar la arquitectura de requerimientos del software</strong> mediante la definición ágil de épicas, features e historias de usuario de alta precisión.</li>
+                            <li><strong>Priorizar y gestionar el backlog corporativo</strong>, además de liderar las ceremonias del marco Scrum coordinando al equipo multidisciplinario.</li>
+                            <li><strong>Negociar y diseñar soluciones de software a la medida</strong> y de alta fidelidad para clientes críticos del sector energético.</li>
+                            <li><strong>LOGROS: Entrega en tiempo (6 meses) de la Fase 2</strong> del software de segmentación de torres de energía para EPM, reemplazando la gestión manual en Excel por un producto digital centralizado con óptima aceptación de los stakeholders.</li>
+                        </ul>
+                    </div>
+
+                    <!-- TRABAJO 3 -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <h4 class="job-title m-0">AI Product Owner / Scrum Master</h4>
+                            <span class="company-date">12/2022 - 08/2023</span>
+                        </div>
+                        <p class="text-muted fw-semibold small mb-2">Yolitigo — Medellín</p>
+                        <ul class="text-secondary ps-3 small lh-base">
+                            <li>Analizar y traducir las necesidades comerciales de los clientes en incrementos de valor e historias de usuario claras para el equipo de desarrollo.</li>
+                            <li>Garantizar el cumplimiento riguroso de marcos de trabajo ágiles, acompañando de cerca a las células de desarrollo y eliminando bloqueos técnicos.</li>
+                            <li>Ejecutar estrategias activas de priorización de backlog orientadas a mantener ciclos de entrega de valor continua (CI/CD).</li>
+                        </ul>
+                    </div>
+
+                    <!-- TRABAJO 4 -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <h4 class="job-title m-0">Desarrollador Backend & Cloud</h4>
+                            <span class="company-date">12/2020 - 12/2022</span>
+                        </div>
+                        <p class="text-muted fw-semibold small mb-2">Pragma — Medellín</p>
+                        <ul class="text-secondary ps-3 small lh-base">
+                            <li>Garantizar la persistencia y eficiencia de los datos mediante el manejo avanzado de bases de datos relacionales y NoSQL (Oracle, SQL Server, DynamoDB).</li>
+                            <li>Desarrollar lógica de negocio backend y microservicios robustos utilizando Java, Node.js y AWS Lambda.</li>
+                            <li>Participar activamente en células ágiles bajo esquemas de integración y despliegue continuo (CI/CD) utilizando Azure DevOps y AWS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- TRABAJO 5 -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <h4 class="job-title m-0">Analista de Desarrollo & Core Banking</h4>
+                            <span class="company-date">03/2018 - 12/2020</span>
+                        </div>
+                        <p class="text-muted fw-semibold small mb-2">Banco de Bogotá — Bogotá, D.C.</p>
+                        <ul class="text-secondary ps-3 small lh-base">
+                            <li>Diseñar y desarrollar soluciones técnicas y análisis funcionales para el core bancario, participando en la implementación de productos críticos como CDTs, sistemas de recaudos, notas débito y procesos de aperturas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CERTIFICACIONES -->
+                <div>
+                    <h3 class="section-title" style="font-size: 1.05rem !important; margin-bottom: 10px;">
+                        Certificaciones Profesionales</h3>
+                    <div class="row g-2 text-secondary" style="font-size: 0.8rem; line-height: 1.2;">
+                        <div class="col-4">✔ Scrum Master Prof. — CertiProf</div>
+                        <div class="col-4">✔ Scrum Product Owner — CertiProf</div>
+                        <div class="col-4">✔ Scrum Developer — CertiProf</div>
+                        <div class="col-4">✔ Scrum Fundamentals — CertiProf</div>
+                        <div class="col-4">✔ Curso Prof. de Scrum — Platzi</div>
+                        <div class="col-4">✔ Herr. y Frameworks Ágiles — Platzi</div>
+                        <div class="col-4">✔ Fund. Project Mgmt — Platzi</div>
+                        <div class="col-4">✔ OKRs para Managers — Platzi</div>
+                        <div class="col-4">✔ Herr. Intermedias PO — Platzi</div>
+                        <div class="col-4">✔ Fundamentos de PO — Platzi</div>
+                        <div class="col-4">✔ Scrum Master — Platzi</div>
+                        <div class="col-4">✔ Historias de Usuario — Platzi</div>
+                        <div class="col-4">✔ Gestión Equipos Ágiles — Platzi</div>
+                        <div class="col-4">✔ Trello — Platzi</div>
+                        <div class="col-4">✔ Fundamentos de Python — Platzi</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

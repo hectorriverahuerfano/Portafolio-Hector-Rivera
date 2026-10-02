@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héctor Fabio Rivera - Portafolio AI Developer & Software Engineer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0f172a;       /* Slate 900 */
+            --secondary-color: #0284c7;     /* Sky 600 - IA Tech Blue */
+            --accent-blue: #38bdf8;        /* Sky 400 */
+            --accent-cyan: #06b6d4;        /* Cyan 500 */
+            --text-muted: #64748b;         /* Slate 500 */
+            --bg-light: #f8fafc;           /* Slate 50 */
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;       /* Slate 200 */
+            --code-font: 'Fira Code', monospace;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: #1e293b;
+            font-size: 0.94rem;
+            line-height: 1.55;
+        }
+
+        .portfolio-container {
+            background: #ffffff;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 25px;
+            margin-bottom: 45px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            padding: 34px 24px;
+        }
+
+        .main-content {
+            padding: 34px 32px;
+            background-color: #ffffff;
+        }
+
+        .profile-img {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+
+        .section-title {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .sidebar .section-title {
+            color: #ffffff;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.35);
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+        }
+
+        /* Tech Stack Pills in Sidebar */
+        .tech-pill-group {
+            margin-bottom: 14px;
+        }
+
+        .tech-pill-title {
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-blue);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge-skill {
+            background-color: rgba(2, 132, 199, 0.08);
+            color: var(--secondary-color);
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 0.78rem;
+            display: inline-block;
+            margin-bottom: 4px;
+            margin-right: 3px;
+            border: 1px solid rgba(2, 132, 199, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .badge-skill:hover {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+        }
+
+        .sidebar .badge-skill {
+            background-color: rgba(255, 255, 255, 0.07);
+            color: #e2e8f0;
+            font-size: 0.76rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .sidebar .badge-skill.badge-highlight {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.35);
+            font-weight: 700;
+        }
+
+        /* Metric Cards in Sidebar */
+        .sidebar-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .sidebar-metric-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 10px 6px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-metric-card.full-width {
+            grid-column: span 2;
+        }
+
+        .sidebar-metric-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-blue);
+            transform: translateY(-1px);
+        }
+
+        .sidebar-metric-number {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+
+        .sidebar-metric-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+
+        /* Modality Cards */
+        .modality-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 8px;
+            padding: 9px 12px;
+            margin-bottom: 9px;
+            transition: all 0.2s ease;
+        }
+
+        .modality-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-blue);
+        }
+
+        .modality-title {
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 2px;
+        }
+
+        .modality-desc {
+            font-size: 0.78rem;
+            color: #cbd5e1;
+            margin: 0;
+            line-height: 1.32;
+        }
+
+        /* Proposal Box */
+        .proposal-box {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(6, 182, 212, 0.03) 100%);
+            border: 1px solid rgba(2, 132, 199, 0.18);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 13px 16px;
+            margin-bottom: 16px;
+        }
+
+        /* Service Cards */
+        .service-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 13px 16px;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+            border-color: rgba(2, 132, 199, 0.3);
+            border-left-color: var(--secondary-color);
+        }
+
+        .service-box-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-item-title {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 0.88rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 11px 13px;
+            height: 100%;
+            transition: all 0.25s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.12);
+        }
+
+        .project-card.featured-project {
+            border: 1.5px solid rgba(2, 132, 199, 0.4);
+            background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+        }
+
+        .project-card.featured-project::before {
+            content: "NUEVO CASO DESTACADO";
+            position: absolute;
+            top: -9px;
+            right: 12px;
+            background: var(--secondary-color);
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-name {
+            font-weight: 700;
+            font-size: 0.93rem;
+            color: var(--primary-color);
+            margin-bottom: 1px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .project-tag {
+            font-size: 0.77rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .project-desc {
+            font-size: 0.8rem;
+            color: #475569;
+            line-height: 1.35;
+            margin-bottom: 6px;
+        }
+
+        .project-link {
+            font-size: 0.78rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .project-link:hover {
+            color: #0369a1;
+            text-decoration: underline;
+        }
+
+        .project-tech-pills {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+
+        .project-pill {
+            font-size: 0.68rem;
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .export-btn {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            border: none;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+            transition: all 0.2s ease;
+            font-size: 0.92rem;
+        }
+
+        .export-btn:hover {
+            background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
+        }
+
+        /* =======================================================
+           PRINT STYLES - COMPACTO & ALTA DEFINICIÓN (A4 COMPATIBLE)
+           ======================================================= */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+
+            html,
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background-color: #ffffff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                font-size: 10.8px !important;
+                line-height: 1.34 !important;
+                color: #0f172a !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .container,
+            .portfolio-container {
+                min-width: 100% !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                border: none !important;
+                overflow: visible !important;
+            }
+
+            .portfolio-container>.row {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                margin: 0 !important;
+                min-height: 100vh !important;
+            }
+
+            .portfolio-container>.row>.col-md-4 {
+                width: 31% !important;
+                max-width: 31% !important;
+                flex: 0 0 31% !important;
+            }
+
+            .portfolio-container>.row>.col-md-8 {
+                width: 69% !important;
+                max-width: 69% !important;
+                flex: 0 0 69% !important;
+            }
+
+            .sidebar {
+                background-color: #0f172a !important;
+                color: #f8fafc !important;
+                padding: 24px 18px !important;
+                box-sizing: border-box !important;
+            }
+
+            .main-content {
+                padding: 24px 24px !important;
+                box-sizing: border-box !important;
+            }
+
+            .profile-img {
+                width: 95px !important;
+                height: 95px !important;
+                margin-bottom: 10px !important;
+                border: 3px solid var(--secondary-color) !important;
+            }
+
+            .sidebar h1 {
+                font-size: 16px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .sidebar p.subtitle {
+                font-size: 10px !important;
+                line-height: 1.25 !important;
+            }
+
+            .section-title {
+                font-size: 12.5px !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 3px !important;
+                border-bottom: 1.5px solid var(--secondary-color) !important;
+            }
+
+            .sidebar .section-title {
+                font-size: 11px !important;
+                margin-bottom: 7px !important;
+                border-bottom: 1.5px solid rgba(56, 189, 248, 0.4) !important;
+            }
+
+            .proposal-box {
+                padding: 9px 12px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .proposal-text {
+                font-size: 10.2px !important;
+                line-height: 1.35 !important;
+            }
+
+            .service-box {
+                padding: 8px 12px !important;
+                margin-bottom: 8px !important;
+                border-left: 3px solid var(--secondary-color) !important;
+            }
+
+            .service-box-title {
+                font-size: 11.5px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .service-item-title {
+                font-size: 10.4px !important;
+            }
+
+            .service-box ul li {
+                font-size: 10px !important;
+                line-height: 1.3 !important;
+                margin-bottom: 2px !important;
+            }
+
+            .project-card {
+                padding: 8px 10px !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+
+            .project-name {
+                font-size: 10.5px !important;
+            }
+
+            .project-tag {
+                font-size: 8.8px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .project-desc {
+                font-size: 9px !important;
+                line-height: 1.25 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .project-link {
+                font-size: 8.8px !important;
+            }
+
+            .project-pill {
+                font-size: 7.5px !important;
+                padding: 1px 4px !important;
+            }
+
+            .project-card.featured-project::before {
+                display: none !important;
+            }
+
+            .badge-skill {
+                padding: 2px 5px !important;
+                font-size: 8.5px !important;
+                margin-bottom: 3px !important;
+                margin-right: 2px !important;
+            }
+
+            .sidebar .badge-skill {
+                background-color: #1e293b !important;
+                color: #cbd5e1 !important;
+                border: 1px solid #334155 !important;
+            }
+
+            .sidebar .badge-skill.badge-highlight {
+                background-color: #0369a1 !important;
+                color: #ffffff !important;
+            }
+
+            .sidebar-metric-card {
+                padding: 6px 4px !important;
+            }
+
+            .sidebar-metric-number {
+                font-size: 1.15rem !important;
+            }
+
+            .sidebar-metric-label {
+                font-size: 0.65rem !important;
+            }
+
+            .modality-card {
+                padding: 6px 8px !important;
+                margin-bottom: 6px !important;
+            }
+
+            .modality-title {
+                font-size: 0.8rem !important;
+            }
+
+            .modality-desc {
+                font-size: 0.72rem !important;
+            }
+
+            .mb-3 {
+                margin-bottom: 9px !important;
+            }
+
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                filter: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Botón de Exportar Flotante (No se imprimirá en el PDF) -->
+    <div class="container text-end mt-3 mb-1 no-print">
+        <div class="d-inline-flex gap-2">
+            <button class="btn btn-primary px-4 py-2 fw-bold export-btn d-flex align-items-center"
+                onclick="window.print()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-file-earmark-pdf-fill me-2" viewBox="0 0 16 16">
+                    <path
+                        d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.508-.077-.004-.115-.053-.13-.105-.015-.054-.006-.13.065-.213.072-.085.193-.175.39-.258zm-.32-1.95.772-2.435c-.155.425-.302.83-.44 1.21-.139.378-.257.74-.332 1.058zM10 3.5v2a.5.5 0 0 0 .5.5h2v-2H10z" />
+                    <path
+                        d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L9.293 0zM10.147 4.646a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.293l2.646-2.647z" />
+                </svg>
+                Exportar Portafolio AI a PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal del Portafolio -->
+    <div class="container portfolio-container">
+        <div class="row g-0">
+
+            <!-- COLUMNA IZQUIERDA: SIDEBAR TÉCNICO & EJECUTIVO -->
+            <div class="col-md-4 sidebar">
+                <!-- CABECERA DE PERFIL -->
+                <div class="text-center mb-3">
+                    <img src="foto_perfil.png" alt="Héctor Fabio Rivera" class="profile-img mb-2 shadow">
+                    <h1 class="fw-bold fs-4 tracking-wide m-0 text-white">HÉCTOR FABIO RIVERA</h1>
+                    <p class="subtitle fw-semibold mt-1 mb-0"
+                        style="color: var(--accent-blue) !important; font-size: 0.84rem;">
+                        Senior AI Developer • Software Engineer<br>AI Solutions Architect
+                    </p>
+                </div>
+
+                <!-- CONTACTO & ENLACES -->
+                <div class="mb-3">
+                    <h3 class="section-title">Contacto & Redes</h3>
+                    <ul class="list-unstyled text-white-50 small lh-base mb-0" style="font-size: 0.83rem;">
+                        <li class="d-flex align-items-center mb-1">
+                            <span class="me-2 text-white">📱</span>
+                            <a href="https://wa.me/573507928813" target="_blank" class="text-info text-decoration-none"
+                                style="color: var(--accent-blue) !important;">
+                                +57 350 792 8813
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center mb-1">
+                            <span class="me-2 text-white">✉️</span>
+                            <a href="mailto:hector58472@gmail.com" class="text-info text-decoration-none"
+                                style="color: var(--accent-blue) !important;">
+                                hector58472@gmail.com
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center mb-1">
+                            <span class="me-2 text-white">🔗</span>
+                            <a href="https://www.linkedin.com/in/hector-fabio-r-35614610b/" target="_blank"
+                                class="text-info text-decoration-none" style="color: var(--accent-blue) !important;">
+                                linkedin.com/in/hector-fabio-rivera
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <span class="me-2 text-white">🌐</span>
+                            <a href="https://platzi.com/p/HRIVERA_58472/" target="_blank"
+                                class="text-info text-decoration-none" style="color: var(--accent-blue) !important;">
+                                platzi.com/p/HRIVERA_58472
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- STACK TÉCNICO & HABILIDADES CLAVE -->
+                <div class="mb-3">
+                    <h3 class="section-title">Stack Técnico & IA</h3>
+                    
+                    <div class="tech-pill-group">
+                        <div class="tech-pill-title">🤖 IA & Model Context Protocol</div>
+                        <span class="badge-skill badge-highlight">MCP (Model Context Protocol)</span>
+                        <span class="badge-skill badge-highlight">Agentes Autónomos</span>
+                        <span class="badge-skill">LLMs (Gemini, Claude, GPT)</span>
+                        <span class="badge-skill">Automatización con IA</span>
+                        <span class="badge-skill">Cursor & Copilot</span>
+                    </div>
+
+                    <div class="tech-pill-group">
+                        <div class="tech-pill-title">💻 Lenguajes & Frameworks</div>
+                        <span class="badge-skill badge-highlight">Python</span>
+                        <span class="badge-skill badge-highlight">PHP</span>
+                        <span class="badge-skill badge-highlight">JavaScript</span>
+                        <span class="badge-skill">Node.js</span>
+                        <span class="badge-skill">APIs RESTful</span>
+                        <span class="badge-skill">Microservicios</span>
+                    </div>
+
+                    <div class="tech-pill-group">
+                        <div class="tech-pill-title">☁️ Cloud, BD & DevOps</div>
+                        <span class="badge-skill badge-highlight">AWS (Lambda, RDS, S3)</span>
+                        <span class="badge-skill badge-highlight">MySQL</span>
+                        <span class="badge-skill badge-highlight">Git / GitHub</span>
+                        <span class="badge-skill">Azure DevOps</span>
+                        <span class="badge-skill">SQL Server</span>
+                        <span class="badge-skill">CI/CD Pipelines</span>
+                    </div>
+                </div>
+
+                <!-- MODALIDADES DE SERVICIO -->
+                <div class="mb-3">
+                    <h3 class="section-title">Modalidades de Trabajo</h3>
+
+                    <div class="modality-card">
+                        <div class="modality-title">⚡ Desarrollo de Software con IA</div>
+                        <p class="modality-desc">Construcción de aplicaciones web, integración de agentes autónomos y arquitecturas backend escalables.</p>
+                    </div>
+
+                    <div class="modality-card">
+                        <div class="modality-title">🤝 Technical Lead & Fractional PO</div>
+                        <p class="modality-desc">Dirección ágil de células de desarrollo, revisión de código y gobernanza técnica de sprints.</p>
+                    </div>
+
+                    <div class="modality-card">
+                        <div class="modality-title">🚀 MVPs Asistidos & Llave en Mano</div>
+                        <p class="modality-desc">Desde la arquitectura funcional hasta el despliegue en producción a alta velocidad.</p>
+                    </div>
+                </div>
+
+                <!-- MÉTRICAS DE IMPACTO -->
+                <div>
+                    <h3 class="section-title">Métricas de Impacto</h3>
+                    <div class="sidebar-metrics-grid">
+                        <div class="sidebar-metric-card">
+                            <div class="sidebar-metric-number">+35%</div>
+                            <div class="sidebar-metric-label">Velocidad de Entrega</div>
+                        </div>
+                        <div class="sidebar-metric-card">
+                            <div class="sidebar-metric-number">-50%</div>
+                            <div class="sidebar-metric-label">Tiempo Formulación MVP</div>
+                        </div>
+                        <div class="sidebar-metric-card">
+                            <div class="sidebar-metric-number">-20%</div>
+                            <div class="sidebar-metric-label">Tiempos de Análisis</div>
+                        </div>
+                        <div class="sidebar-metric-card">
+                            <div class="sidebar-metric-number">+8 Años</div>
+                            <div class="sidebar-metric-label">Trayectoria Software</div>
+                        </div>
+                        <div class="sidebar-metric-card full-width">
+                            <div class="sidebar-metric-number">100%</div>
+                            <div class="sidebar-metric-label">Cumplimiento en Despliegues</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: PROPUESTA, SERVICIOS & CASOS DE ÉXITO -->
+            <div class="col-md-8 main-content">
+
+                <!-- ENCABEZADO & PROPUESTA DE VALOR EN DESARROLLO CON IA -->
+                <div class="mb-3">
+                    <h2 class="section-title mb-2">
+                        Propuesta de Valor • Desarrollo de Software con IA
+                    </h2>
+                    <div class="proposal-box">
+                        <p class="proposal-text text-secondary lh-base mb-0" style="text-align: justify; font-size: 0.88rem;">
+                            Ingeniero de Sistemas y Especialista en <strong>Desarrollo de Software impulsado por Inteligencia Artificial (IA)</strong>, enfocado en acelerar el ciclo de vida del software y construir productos digitales escalables, eficientes y de alto valor comercial. Combino una sólida base técnica en backend y cloud (<strong>Python, PHP, JavaScript, MySQL, AWS, Git</strong>) con la vanguardia de la IA generativa: <strong>diseño de agentes inteligentes</strong>, conectividad contextual mediante <strong>MCP (Model Context Protocol)</strong>, automatizaciones de flujos de trabajo y liderazgo ágil de células de desarrollo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SERVICIOS DE DESARROLLO & SOLUCIONES CON IA -->
+                <div class="mb-3">
+                    <h3 class="section-title">💻 Servicios de Ingeniería de Software & Soluciones IA</h3>
+
+                    <!-- Servicio 1 -->
+                    <div class="service-box">
+                        <div class="service-box-title">
+                            <span class="text-primary me-2 fw-bold">1.</span> Desarrollo Backend & Aplicaciones Web (Python, PHP, JS, MySQL)
+                        </div>
+                        <ul class="text-secondary ps-3 mb-0 small lh-base">
+                            <li class="mb-1">
+                                <span class="service-item-title">Construcción de APIs & Microservicios:</span> Desarrollo de lógica de negocio modular, segura y de alto rendimiento utilizando <strong>Python, PHP y JavaScript (Node.js)</strong> con arquitecturas desacopladas.
+                            </li>
+                            <li class="mb-1">
+                                <span class="service-item-title">Persistencia & Bases de Datos Relacionales:</span> Modelado, optimización de consultas, transacciones concurrentes e integridad de datos en <strong>MySQL</strong> y SQL Server.
+                            </li>
+                            <li>
+                                <span class="service-item-title">Control de Versiones & Clean Code:</span> Gestión colaborativa rigurosa con <strong>Git / GitHub</strong>, revisión de PRs, branching strategies y refactorización orientada a mantenibilidad.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="service-box">
+                        <div class="service-box-title">
+                            <span class="text-primary me-2 fw-bold">2.</span> Agentes Autónomos de IA & Conectividad MCP (Model Context Protocol)
+                        </div>
+                        <ul class="text-secondary ps-3 mb-0 small lh-base">
+                            <li class="mb-1">
+                                <span class="service-item-title">Integración de Protocolo MCP:</span> Diseño de servidores y clientes MCP para conectar modelos de lenguaje con fuentes de datos vivas, bases de datos (MySQL) y APIs de negocio.
+                            </li>
+                            <li class="mb-1">
+                                <span class="service-item-title">Agentes Inteligentes & Workflows:</span> Orquestación de flujos autónomos que analizan requerimientos, consultan documentación técnica y ejecutan acciones automatizadas sin fricción.
+                            </li>
+                            <li>
+                                <span class="service-item-title">Automatización de Procesos con IA:</span> Integración de LLMs (Gemini, Claude, OpenAI) con herramientas de automatización (n8n, pipelines internos) para optimizar operaciones críticas.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="service-box">
+                        <div class="service-box-title">
+                            <span class="text-primary me-2 fw-bold">3.</span> Arquitectura Cloud, Serverless & Despliegues en AWS
+                        </div>
+                        <ul class="text-secondary ps-3 mb-0 small lh-base">
+                            <li class="mb-1">
+                                <span class="service-item-title">Servicios Cloud en AWS:</span> Configuración y despliegue de soluciones escalables utilizando <strong>AWS Lambda, Amazon RDS (MySQL), S3, API Gateway y DynamoDB</strong>.
+                            </li>
+                            <li>
+                                <span class="service-item-title">Pipelines CI/CD & Despliegue Continuo:</span> Automatización de compilación, pruebas y entrega continua con Git, Azure DevOps y entornos cloud elásticos.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 4 -->
+                    <div class="service-box">
+                        <div class="service-box-title">
+                            <span class="text-primary me-2 fw-bold">4.</span> Formulación de MVPs Asistidos por IA & Technical Product Leadership
+                        </div>
+                        <ul class="text-secondary ps-3 mb-0 small lh-base">
+                            <li class="mb-1">
+                                <span class="service-item-title">Reducción del 50% en Tiempo de MVP:</span> Generación acelerada de especificaciones técnicas, prototipos funcionales y validación ágil de hipótesis de negocio con IA.
+                            </li>
+                            <li>
+                                <span class="service-item-title">Bridge Técnico-Estratégico:</span> Alineación experta entre directivos, stakeholders y desarrolladores para garantizar que el código entregado genere impacto financiero medible.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PROYECTOS DE INNOVACIÓN & CASOS DE ÉXITO -->
+                <div>
+                    <h3 class="section-title">🚀 Proyectos Desarrollados & Casos de Éxito</h3>
+
+                    <div class="row g-2">
+                        <!-- PROYECTO 1: YOLITIGO (NUEVO & DESTACADO) -->
+                        <div class="col-12">
+                            <div class="project-card featured-project">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <div class="project-name">
+                                            ⚖️ YoLitigo.com
+                                        </div>
+                                        <a href="https://app.yolitigo.com/" target="_blank" class="project-link fw-bold">
+                                            app.yolitigo.com ↗
+                                        </a>
+                                    </div>
+                                    <div class="project-tag">LegalTech • Plataforma de Minutas Jurídicas, Consultoría Legal & Firma Electrónica Certificada</div>
+                                    <p class="project-desc mb-1">
+                                        Aplicación web integral para la consultoría jurídica digital y elaboración interactiva de minutas, contratos y derechos de petición en minutos. Incorpora suscripción digital de documentos mediante <strong>firma electrónica con plena validez jurídica bajo la Ley 527 de 1999</strong> en Colombia, suprimiendo trámites manuales e intermediarios.
+                                    </p>
+                                </div>
+                                <div class="project-tech-pills">
+                                    <span class="project-pill">Web App SPA</span>
+                                    <span class="project-pill">Firma Electrónica Ley 527</span>
+                                    <span class="project-pill">Automatización Documental</span>
+                                    <span class="project-pill">Backend APIs</span>
+                                    <span class="project-pill">Git / CI-CD</span>
+                                    <span class="project-pill">Legal Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROYECTO 2: FLIT ECOSISTEMA -->
+                        <div class="col-6">
+                            <div class="project-card">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="project-name">🚗 Flit Ecosistema</div>
+                                        <a href="https://flitsas.com.co/" target="_blank" class="project-link">flitsas.com.co ↗</a>
+                                    </div>
+                                    <div class="project-tag">GovTech & Automatización Tránsito</div>
+                                    <p class="project-desc">
+                                        Plataforma digital para la gestión y radicación automatizada de trámites vehiculares sin intermediarios, integrando validaciones y flujos seguros.
+                                    </p>
+                                </div>
+                                <div class="project-tech-pills">
+                                    <span class="project-pill">Agentes IA</span>
+                                    <span class="project-pill">Azure DevOps</span>
+                                    <span class="project-pill">Microservicios</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROYECTO 3: LUCYAPP -->
+                        <div class="col-6">
+                            <div class="project-card">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="project-name">🐾 LucyApp</div>
+                                        <a href="https://lucyapp.com.co/" target="_blank" class="project-link">lucyapp.com.co ↗</a>
+                                    </div>
+                                    <div class="project-tag">Pet Recovery, QR & IA Analítica</div>
+                                    <p class="project-desc">
+                                        App comunitaria para reencuentro de mascotas perdidas mediante códigos QR inteligentes, geolocalización dinámica y modelos predictivos.
+                                    </p>
+                                </div>
+                                <div class="project-tech-pills">
+                                    <span class="project-pill">Mobile & Cloud</span>
+                                    <span class="project-pill">QR Dinámicos</span>
+                                    <span class="project-pill">IA Analítica</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROYECTO 4: ALLYBIKE -->
+                        <div class="col-6">
+                            <div class="project-card">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="project-name">🚲 Allybike</div>
+                                        <a href="https://allybike.com/" target="_blank" class="project-link">allybike.com ↗</a>
+                                    </div>
+                                    <div class="project-tag">Micromovilidad & Algoritmos de Ruta</div>
+                                    <p class="project-desc">
+                                        Aplicación móvil para la creación de rutas en bicicleta y gestión colaborativa de rodadas urbanas con ciclistas.
+                                    </p>
+                                </div>
+                                <div class="project-tech-pills">
+                                    <span class="project-pill">Geolocalización</span>
+                                    <span class="project-pill">APIs REST</span>
+                                    <span class="project-pill">Comunidades</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROYECTO 5: RECLO -->
+                        <div class="col-6">
+                            <div class="project-card">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="project-name">♻️ Reclo (USA)</div>
+                                        <a href="https://reclo.io/" target="_blank" class="project-link">reclo.io ↗</a>
+                                    </div>
+                                    <div class="project-tag">Circular Economy & Rewards</div>
+                                    <p class="project-desc">
+                                        Plataforma digital para la recolección de materiales reciclables con incentivos directos para usuarios en Estados Unidos.
+                                    </p>
+                                </div>
+                                <div class="project-tech-pills">
+                                    <span class="project-pill">Fintech / Rewards</span>
+                                    <span class="project-pill">Cloud AWS</span>
+                                    <span class="project-pill">Trazabilidad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
