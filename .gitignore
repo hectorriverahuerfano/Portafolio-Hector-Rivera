@@ -4,6 +4,11 @@ token*
 .env.*
 *.local
 
+# Archivos HTML y documentos Markdown locales (excepto README.md)
+*.html
+*.md
+!README.md
+
 # Dependencias y logs
 node_modules/
 dist/
