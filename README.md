@@ -14,6 +14,7 @@
   </p>
 
   <p align="center">
+    <a href="https://github.com/hectorriverahuerfano"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
     <a href="https://www.linkedin.com/in/hector-fabio-r-35614610b/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="https://wa.me/573507928813"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" /></a>
     <a href="mailto:hector58472@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
@@ -40,16 +41,27 @@
 
 <div align="center">
 
-| Especialidad | Tecnologías & Herramientas |
+| Especialidad | Tecnologías & Herramientas Clave |
 | :--- | :--- |
+| **🎯 Product Owner & Project Management** | `Azure DevOps (Azure Boards)` • `Jira Software` • `Trello` • `Gestión de Backlog (RICE / MoSCoW)` • `Historias de Usuario (Gherkin)` • `Modelos B2B & B2C` • `Entrega End-to-End (E2E)` • `Go-To-Market (GTM)` • `OKRs & KPIs` • `Scrum & Kanban` |
 | **🤖 IA, LLMs & Agentes Autónomos** | `Model Context Protocol (MCP)` • `Agentes Autónomos` • `Gemini API` • `Claude API` • `OpenAI / ChatGPT` • `Antigravity` • `Cursor` • `Copilot` • `n8n` • `Automatización de Flujos` |
 | **💻 Backend & Arquitectura** | `Python` • `Java (Spring Boot)` • `Node.js` • `PHP (Laravel)` • `Microservicios` • `APIs RESTful` • `Clean Architecture` |
-| **☁️ Cloud & Serverless** | `AWS Lambda` • `Amazon RDS` • `Amazon S3` • `API Gateway` • `DynamoDB` • `Microsoft Azure` • `Azure Boards / DevOps` • `Render` |
+| **☁️ Cloud & Serverless** | `AWS Lambda` • `Amazon RDS` • `Amazon S3` • `API Gateway` • `DynamoDB` • `Microsoft Azure` • `Azure Pipelines` • `Render` |
 | **🗄️ Bases de Datos** | `MySQL` • `Microsoft SQL Server` • `PostgreSQL` • `Oracle` • `DynamoDB` • `Firebase Firestore` • `Google BigQuery` |
 | **🚀 DevOps & CI/CD** | `Git` • `GitHub` • `Azure Pipelines` • `Docker` • `CI/CD Pipelines` • `Trunk-based development` |
-| **🎯 Producto, Agilidad & Liderazgo** | `Scrum Master` • `Product Owner` • `Historias de Usuario (Gherkin)` • `OKRs` • `Roadmapping` • `Jira` • `Trello` |
 
 </div>
+
+### 🎯 Product Ownership, Project Management & Estrategia de Producto (Detallado)
+
+- **🛠️ Herramientas de Gestión & Tableros Ágiles:** Dominio avanzado de **Azure DevOps (Azure Boards)** para trazabilidad completa de ítems de trabajo, bugs y features; **Jira Software**, **Trello**, **Microsoft Planner** y documentación colaborativa en **Confluence**.
+- **📋 Gestión y Priorización de Backlog:** Estructuración estratégica del Product Backlog mediante matrices de priorización (**RICE, MoSCoW, WSJF**), refinamiento continuo con el equipo de ingeniería y definición de épicas operativas y comerciales.
+- **✍️ Historias de Usuario & Criterios de Aceptación (Gherkin):** Redacción de User Stories precisas bajo el estándar **Gherkin (`Given - When - Then`)**, asegurando especificaciones funcionales sin ambigüedad y facilitando testing automatizado y criterios de aceptación claros.
+- **🏢 Modelos de Negocio B2B & B2C:** Experiencia liderando productos digitales tanto para el ecosistema corporativo (**B2B** LegalTech y sector energético como EPM) como plataformas masivas de consumo (**B2C** en GovTech vehicular, movilidad y PetTech).
+- **🔄 Ciclo de Vida End-to-End (E2E):** Gestión integral del producto desde la fase de **Product Discovery**, levantamiento de requerimientos y diseño de arquitectura, hasta la validación con usuarios, despliegue continuo y soporte post-lanzamiento.
+- **🚀 Go-to-Market (GTM) & Time-to-Market:** Planificación y ejecución de estrategias de lanzamiento al mercado (**Go-to-Market**), reduciendo drásticamente el time-to-market mediante prototipado rápido y formulación de MVPs asistidos por IA.
+- **📈 Gobernanza, OKRs & Métricas de Negocio:** Alineación de objetivos estratégicos con **OKRs**, medición de KPIs de adopción, retención, satisfacción del usuario y velocidad de los squads de desarrollo.
+- **🤝 Bridge Técnico-Estratégico:** Rol articulador entre comités de dirección, stakeholders de negocio y células de desarrollo de software para convertir visión de negocio en código de alto rendimiento.
 
 ---
 
