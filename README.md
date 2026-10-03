@@ -126,19 +126,60 @@ Banco de Bogotá (Analista de Desarrollo)    [03/2018 – 12/2020] ──► Cor
 ## 🎓 Formación Académica & Certificaciones
 
 ### 🎓 Títulos Universitarios
-- **Ingeniero de Sistemas** — Corporación Universitaria Remington (*Uniremington*, Bogotá D.C., 2020)
-- **Tecnólogo en Sistemas de Información** — Fundación Universitaria Colombo Germana (*Unigermana*, Bogotá D.C., 2019)
-- **Técnico en Programación de Software** — Servicio Nacional de Aprendizaje (*SENA*, Ibagué, 2013)
+- 🎓 **Ingeniero de Sistemas** — Corporación Universitaria Remington (*Uniremington*, Bogotá D.C., 2020)
+- 🎓 **Tecnólogo en Sistemas de Información** — Fundación Universitaria Colombo Germana (*Unigermana*, Bogotá D.C., 2019)
+- 🎓 **Técnico en Programación de Software** — Servicio Nacional de Aprendizaje (*SENA*, Ibagué, 2013)
 
-### 🏆 Certificaciones Internacionales (CertiProf)
-- 🎖️ **SMPC** — *Scrum Master Professional Certificate*
-- 🎖️ **SPOPC** — *Scrum Product Owner Certificate*
-- 🎖️ **SDPC** — *Scrum Developer Professional Certificate*
-- 🎖️ **SFC** — *Scrum Fundamentals Certified*
+---
 
-### 📚 Especializaciones & Formación Continua (Platzi)
-- **Producto & Agilidad:** OKRs para Managers • Frameworks para Product Owners • Gestión de Equipos Ágiles • Historias de Usuario en Scrum.
-- **Ingeniería & Backend:** Java con Spring Boot • Java Spring • Testing en Java • Python • Git y GitHub Profesional • Entornos de Desarrollo en Linux/Windows.
+### 🏆 Certificaciones Oficiales Internacionales (CertiProf)
+
+| Certificación | Emisor | Sigla | Estado |
+| :--- | :--- | :---: | :---: |
+| **Scrum Master Professional Certificate** | CertiProf | `SMPC` | ✅ Verificado |
+| **Scrum Product Owner Certificate** | CertiProf | `SPOPC` | ✅ Verificado |
+| **Scrum Developer Professional Certificate** | CertiProf | `SDPC` | ✅ Verificado |
+| **Scrum Fundamentals Certified** | CertiProf | `SFC` | ✅ Verificado |
+
+---
+
+### 📚 Certificaciones & Cursos Acreditados (Platzi)
+> Ver perfil oficial de credenciales y cursos verificados en: **[platzi.com/p/HRIVERA_58472](https://platzi.com/p/HRIVERA_58472/)**
+
+#### 🎯 Gestión de Producto, Agilidad & Liderazgo (Platzi)
+- ✔️ **Curso Avanzado de OKRs para Managers**
+- ✔️ **Curso de Herramientas y Frameworks Intermedias para Product Owners**
+- ✔️ **Curso de Fundamentos de Product Owner**
+- ✔️ **Curso Profesional de Scrum**
+- ✔️ **Curso de Scrum Master**
+- ✔️ **Curso de Historias de Usuario en Scrum**
+- ✔️ **Curso de Gestión de Equipos Ágiles**
+- ✔️ **Curso de Fundamentos de Project Management**
+- ✔️ **Curso de Trello para Gestión Ágil**
+
+#### 💻 Desarrollo Backend, Arquitectura & Software Engineering (Platzi)
+- ✔️ **Curso de Java: Backend con Spring Boot**
+- ✔️ **Curso de Java Spring**
+- ✔️ **Curso Básico de Testing en Java**
+- ✔️ **Curso de Java SE Persistencia de Datos**
+- ✔️ **Curso de Java SE Orientado a Objetos**
+- ✔️ **Curso de Introducción a Java**
+- ✔️ **Curso de Programación Orientada a Objetos: POO**
+- ✔️ **Curso de Fundamentos de Python**
+- ✔️ **Curso Profesional de Git y GitHub**
+- ✔️ **Curso Básico de Programación**
+- ✔️ **Curso Básico de Algoritmos y Pensamiento Lógico**
+
+#### 🛠️ Sistemas, Entornos de Desarrollo & Terminal (Platzi)
+- ✔️ **Curso de Introducción a la Terminal y Línea de Comandos**
+- ✔️ **Curso de Configuración de Entorno de Desarrollo en Linux**
+- ✔️ **Curso de Configuración de Entorno de Desarrollo en macOS**
+- ✔️ **Curso de Prework: Configuración de Entorno de Desarrollo en Windows**
+- ✔️ **Curso Básico de Computadores e Informática**
+
+#### 🌐 Idiomas / Competencias Lingüísticas (Platzi)
+- ✔️ **Curso de Inglés Práctico para Descripciones Personales**
+- ✔️ **Curso de Inglés Básico A1: Conversaciones Cortas y Habituales**
 
 ---
 
